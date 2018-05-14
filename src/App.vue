@@ -3,12 +3,13 @@
     <mt-cell title="标题文字" value="说明文字">mint-ui测试</mt-cell>
     <template>
       <div id="app">
-        <input type="button" value="增加" @click="increment">
+        <input type="button" value="增加5" @click="add(5)">
+        <input type="button" value="减少2" @click="reduce(2)">
         <span>现在的数字为{{count}}</span>
       </div>
     </template>
     <router-view></router-view>
-    <div class="test">rem测试</div>
+    <div class="test">rem测试（直接按图纸上量出来的写PX就好了）</div>
   </div>
 </template>
 
@@ -27,11 +28,15 @@
     ]),//从getter.js获取数据属性
     methods: {
       ...mapMutations({
-        'increment':'INCREMENT'
+        'increment':'INCREMENT',
+         'decrement':'DECREMENT',
       }),//提交function到action.js
-      test(){
-        this.increment();//这里可以直接调用从mapMutations里引入的方法
-      }//当前页的其他方法
+      add(val){
+        this.increment(val);//这里可以直接调用从mapMutations里引入的方法
+      },
+      reduce(val){
+        this.decrement(val)
+      }
     },
     components: {Cell}
   }

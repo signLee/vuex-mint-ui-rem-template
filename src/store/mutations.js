@@ -5,10 +5,13 @@ import  * as types from './types'
 import getters from './getters'
 
 const mutations={
-    [types.INCREMENT](state){
-  console.log(state)
-    state.count++;
+    [types.INCREMENT](state,val){
+	    state.count+=val;
+	},//数据操作
+   [types.DECREMENT](state,val){
+    state.count-=val;
   }//数据操作
 }
+
 
 export default mutations
