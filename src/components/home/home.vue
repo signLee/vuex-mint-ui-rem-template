@@ -4,10 +4,10 @@
       <mt-cell title="标题文字" value="说明文字">mint-ui测试</mt-cell>
       <input type="button" value="增加5" @click="add(5)">
       <input type="button" value="减少2" @click="reduce(2)">
-      <span>现在的数字为{{count}}</span>
+      <span>VUEX测试：现在的数字为{{count}}</span>
       <div class="test">rem测试（直接按图纸上量出来的写PX就好了）</div>
       <div class="fl">共用样式重置测试</div>
-      <router-link to="home">去主页</router-link>
+      <router-link to="test">去测试页</router-link>
     </div>
 </template>
 
@@ -18,7 +18,6 @@
   export default {
     data: function () {
       return {
-        popupVisible: true
       }
     },
     computed: mapGetters([
