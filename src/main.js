@@ -8,6 +8,7 @@ import 'mint-ui/lib/style.css'
 import MintUi from 'mint-ui';
 import store from './store'
 import 'lib-flexible'
+import './assets/common.css'
 
 
 Vue.config.productionTip = false

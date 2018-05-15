@@ -1,0 +1,95 @@
+/*各类动画*/
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0 !important;
+}
+
+.zoomIn-enter-active, .zoomIn-leave-active{
+    transition: all .3s;
+    transform: scale(1);
+}
+
+.zoomIn-enter, .zoom-leave-to{
+    opacity: .5;
+    transform: scale(1.8);
+}
+
+.zoom-enter-active{
+    transition: all .3s;
+    transform: scale(1);
+}
+
+.zoom-leave-active {
+    transition: all 0s;
+    transform: scale(1);
+}
+.zoom-enter, .zoom-leave-to {
+    opacity: .5;
+    transform: scale(.8);
+}
+
+.slide-leave-active, .slide-enter-active{
+    transition: all .4s;
+    transform: translateX(0%) scale(1);
+}
+
+.slide-enter{
+    transform: translateX(100%) scale(.8);
+}
+
+.slide-leave-to {
+    transform: translateX(-100%) scale(.8);
+}
+
+/* @keyframes slide{
+    0% { transform: translate3d(100%, 0, 0); }
+    90% { transform: translate3d(-10%, 0, 0); }
+    95% { transform: translate3d(10%, 0, 0); }
+    100% { transform: translate3d(0%, 0, 0); }
+} */
+
+/* foward animation */
+.forward-enter-active, .forward-leave-active{
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+}
+
+.forward-enter{
+    opacity: 0;
+    transform: translate3d(30%, 0, 0);
+}
+
+.forward-leave-to{
+    opacity: 0;
+    transform: translate3d(-30%, 0, 0);
+}
+
+/* backward animation */
+.backward-enter-active, .backward-leave-active{
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+}
+
+.backward-enter{
+    opacity: 0;
+    transform: translate3d(-30%, 0, 0);
+}
+
+.backward-leave-to{
+    opacity: 0;
+    transform: translate3d(30%, 0, 0);
+}
+
+.fadeIn-enter-active, .fadeIn-leave-active{
+    transform: translate3d(0, 0%, 0);
+    opacity: 1;
+    transition: all .3s;
+}
+
+.fadeIn-enter, .fadeIn-leave-to{
+    opacity: 0;
+    transform: translate3d(0%, 20%, 0);
+}
+
